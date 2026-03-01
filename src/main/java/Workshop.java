@@ -473,6 +473,10 @@ public class Workshop {
 
       public boolean validarCorreoElectronico(String correo) {
 
+      if (correo == null) return false; 
+
+      return correo.contains("@") && correo.indexOf("@") < correo.lastIndexOf(".");
+
 
     }
 
@@ -484,61 +488,74 @@ public class Workshop {
 
         public double promedioLista(List<Integer> lista) {
 
+        if (lista == null || lista.isEmpty()) return 0.0; 
 
+    int suma = 0;
+    for (int n : lista) {
+        suma += n;
+    }
+
+    return (double) suma / lista.size();
     }
 
 
     // Método que convierte un número en su representación binaria
-    public String convertirABinario(int numero) {
-        // TODO: Implementar el método para convertir un número en su representación binaria.
-        // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        return "";
+    // TODO: Implementar el método para convertir un número en su representación binaria.
+    // Ejemplo: Si numero = 10, el resultado debería ser "1010".
+
+        public String convertirABinario(int numero) {
+
+      return Integer.toBinaryString(numero);
+
     }
+
 
     // Método que convierte un número en su representación hexadecimal
-    public String convertirAHexadecimal(int numero) {
-        // TODO: Implementar el método para convertir un número en su representación hexadecimal.
-        // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
+    // TODO: Implementar el método para convertir un número en su representación hexadecimal.
+    // Ejemplo: Si numero = 255, el resultado debería ser "FF".
+
+
+     public String convertirAHexadecimal(int numero) {
+
+         return Integer.toHexString(numero).toUpperCase();
+
     }
+
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
+    // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
+
+
     public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
-        // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
-        // Las reglas del juego son:
-        // - Piedra vence a Tijera y Lagarto
-        // - Papel vence a Piedra y Spock
-        // - Tijera vence a Papel y Lagarto
-        // - Lagarto vence a Spock y Papel
-        // - Spock vence a Tijera y Piedra
+        
+        String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
+        Random rand = new Random();
+        String eleccionComputadora = opciones[rand.nextInt(opciones.length)];
 
+        if (eleccionUsuario.equals(eleccionComputadora)) {
+            return "Empate! Ambos eligieron " + eleccionUsuario;
+        }
 
-        // El método debe retornar un mensaje indicando el resultado del juego.
-        // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
-        return "";
+        boolean ganaUsuario = 
+            (eleccionUsuario.equals("Piedra") && (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Lagarto"))) ||
+            (eleccionUsuario.equals("Papel") && (eleccionComputadora.equals("Piedra") || eleccionComputadora.equals("Spock"))) ||
+            (eleccionUsuario.equals("Tijera") && (eleccionComputadora.equals("Papel") || eleccionComputadora.equals("Lagarto"))) ||
+            (eleccionUsuario.equals("Lagarto") && (eleccionComputadora.equals("Spock") || eleccionComputadora.equals("Papel"))) ||
+            (eleccionUsuario.equals("Spock") && (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Piedra")));
+
+        if (ganaUsuario) {
+            return "¡Ganaste! Computadora eligió " + eleccionComputadora;
+        } 
+        else {
+            return "¡Perdiste! Computadora eligió " + eleccionComputadora;
+        }
     }
+
+    // El método debe retornar un mensaje indicando el resultado del juego.
+        
 
     public String pptls2(String game[]) {
-        //Retornar player ganador o empate
-            /*
-            Rock = R
-            Paper = P
-            Scissors = S
-            Lizard = L
-            Spock = V
-        Scissors cuts Paper
-Paper covers Rock
-Rock crushes Lizard
-Lizard poisons Spock
-Spock smashes Scissors
-Scissors decapitates Lizard
-Lizard eats Paper
-Paper disproves Spock
-Spock vaporizes Rock
-Rock crushes Scissors
-         */
-        return "";
-    }
+            }
 
     public double areaCirculo(double radio) {
         return 0.0;
