@@ -389,61 +389,104 @@ public class Workshop {
 
 
     // Método que verifica si una cadena es un palíndromo
-    public boolean esPalindromo(String cadena) {
-        // TODO: Implementar el método para verificar si una cadena es un palíndromo.
-        // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        return false;
+    // TODO: Implementar el método para verificar si una cadena es un palíndromo.
+    // Ejemplo: Si cadena = "madam", el resultado debería ser true.
+
+
+         public boolean esPalindromo(String cadena) {
+
+         String invertida = invertirCadena(cadena); // uso el metodo realizado anterior mente 
+         return cadena.equals(invertida);
+
+
     }
+
+
 
     // Método que cuenta el número de palabras en una cadena
-    public int contarPalabras(String cadena) {
-        // TODO: Implementar el método para contar el número de palabras en una cadena.
-        // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
+    // TODO: Implementar el método para contar el número de palabras en una cadena.
+    // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
+
+         public int contarPalabras(String cadena) {
+
+         String[] palabras = cadena.trim().split("\\s+");
+
+         return palabras.length;
+      
     }
+
 
     // Método que convierte una cadena a mayúsculas
-    public String convertirAMayusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a mayúsculas.
-        // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+    // TODO: Implementar el método para convertir una cadena a mayúsculas.
+    // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
+
+        public String convertirAMayusculas(String cadena) {
+
+       return cadena.toUpperCase();
+
     }
+
 
     // Método que convierte una cadena a minúsculas
-    public String convertirAMinusculas(String cadena) {
-        // TODO: Implementar el método para convertir una cadena a minúsculas.
+           // TODO: Implementar el método para convertir una cadena a minúsculas.
         // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
-        return "";
+
+
+         public String convertirAMinusculas(String cadena) {
+
+         return cadena.toLowerCase();
+
     }
+
+
 
     // Método que reemplaza una subcadena en una cadena por otra subcadena
-    public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
-        // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
-        // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
-        return "";
+    // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
+    // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
+
+
+     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
+
+
+     return cadena.replace(antiguaSubcadena, nuevaSubcadena);
+
+        
     }
+
+
 
     // Método que busca una subcadena en una cadena y retorna su índice
-    public int buscarSubcadena(String cadena, String subcadena) {
-        // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
-        // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
-        return -1;
+    // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
+    // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
+
+       public int buscarSubcadena(String cadena, String subcadena) {
+
+       return cadena.indexOf(subcadena);
+
     }
+
 
     // Método que valida un correo electrónico
-    public boolean validarCorreoElectronico(String correo) {
-        // TODO: Implementar el método para validar un correo electrónico.
-        // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+    // TODO: Implementar el método para validar un correo electrónico.
+    // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
+
+
+      public boolean validarCorreoElectronico(String correo) {
+
+
     }
+
 
     // Método que calcula el promedio de una lista de números
+    // TODO: Implementar el método para calcular el promedio de una lista de números.
+    // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
 
-    public double promedioLista(List<Integer> lista) {
-        // TODO: Implementar el método para calcular el promedio de una lista de números.
-        // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
+
+        public double promedioLista(List<Integer> lista) {
+
+
     }
+
 
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
