@@ -8,10 +8,10 @@ public class Workshop {
       // TODO: Implementar el método para retornar la suma de dos números enteros.
       // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
 
-
-        int a+b;
         return a+b;
     }
+
+
 
     // Método que encuentra el mayor de tres números enteros
     // TODO: Implementar el método para retornar el mayor de los tres números enteros.
@@ -48,19 +48,18 @@ public class Workshop {
 
     public int factorial(int n) {
 
-    if (n<0) {
-    return -1; 
+    if (n < 0) {
+        throw new IllegalArgumentException("El número no puede ser negativo");
     }
+
+    int resultado = 1;
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+    return resultado;
+    }
+
     
-    int resultado = 1
-    for (int i= 1; i<= n; i++) {
-      resultado *= i;
-    }
-
-    return resultado;         
-    }
-
-
 
     // Método que verifica si un número es primo
     // TODO: Implementar el método para verificar si un número es primo.
@@ -69,30 +68,30 @@ public class Workshop {
 
      public boolean esPrimo(int numero) {
     
-    if ( numero <= 1){
-    return false; }
-   
-    for (int i = 2; i < numero; i++) {
-        if (numero % i == 0) {
-            return false;
-        }
+     if (numero <= 1) {
+        return false;
     }
 
-    return true;
-}
+        for (int i = 2; i < numero; i++) {
+        if (numero % i == 0) {
+            return false;
+            }
+         }
+      return true;
+      }
+ 
 
-
-
-    // Método que genera una serie de Fibonacc
+        // Método que genera una serie de Fibonacc
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
 
+
        public int[] serieFibonacci(int n) {
 
-        if (n < 0) {
-        return null;
-    }
+    if (n < 0) {
+       throw new IllegalArgumentException(" n no puede ser negativo ");
+     }
 
     int[] serie = new int[n];
 
@@ -114,11 +113,20 @@ public class Workshop {
 
 
     // Método que suma todos los elementos de un arreglo
-    public int sumaElementos(int[] arreglo) {
-        // TODO: Implementar el método para sumar todos los elementos de un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
-        return 0;
+    // TODO: Implementar el método para sumar todos los elementos de un arreglo.
+    // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
+        
+
+
+     public int sumaElementos(int[] arreglo) {
+
+      int suma=0;
+
+        for (int n : arreglo) suma += n;
+        return suma;
+
     }
+
 
     // Método que calcula el promedio de los elementos de un arreglo
     public double promedioElementos(int[] arreglo) {
