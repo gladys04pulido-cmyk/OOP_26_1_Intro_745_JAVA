@@ -3,30 +3,43 @@ import java.util.List;
 public class Workshop {
     public static void main(String[] args) {
 
-    }
+    } // Método que suma dos números enteros
+          public int sumarDosNumeros(int a, int b) {
+      // TODO: Implementar el método para retornar la suma de dos números enteros.
+      // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
 
-    // Método que suma dos números enteros
-    public int sumarDosNumeros(int a, int b) {
-        // TODO: Implementar el método para retornar la suma de dos números enteros.
-        // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
+
+        int a+b;
         return a+b;
     }
 
     // Método que encuentra el mayor de tres números enteros
+    // TODO: Implementar el método para retornar el mayor de los tres números enteros.
+    // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
+
+
     public int mayorDeTresNumeros(int a, int b, int c) {
-        // TODO: Implementar el método para retornar el mayor de los tres números enteros.
-        // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-      if (a>= b && a >=c) return a;
+
+    if (a>= b && a >=c) return a;
     if (b>=c) return b;  
       return c;
     }
 
+
     // Método que retorna la tabla de multiplicar de un número
+    // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
+    // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
+
     public int[] tablaMultiplicar(int numero, int limite) {
-        // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
-        // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
-        return new int[0];
+        
+    int[] tabla = new int[limite];
+    for (int i = 0; i < limite; i++) {
+        tabla[i] = numero * (i + 1);
     }
+    return tabla;
+
+      }
+
 
     // Método que calcula el factorial de un número entero
     public int factorial(int n) {
