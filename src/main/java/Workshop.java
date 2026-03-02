@@ -551,18 +551,57 @@ public class Workshop {
         }
     }
 
-    // El método debe retornar un mensaje indicando el resultado del juego.
         
 
     public String pptls2(String game[]) {
+
+    String p1 = game[0]; // jugador 1
+
+        String p2 = game[1]; // jugador 2
+
+        if (p1.equals(p2)) return "Empate";
+
+        boolean p1Gana = 
+            (p1.equals("R") && (p2.equals("S") || p2.equals("L"))) ||
+            (p1.equals("P") && (p2.equals("R") || p2.equals("V"))) ||
+            (p1.equals("S") && (p2.equals("P") || p2.equals("L"))) ||
+            (p1.equals("L") && (p2.equals("V") || p2.equals("P"))) ||
+            (p1.equals("V") && (p2.equals("S") || p2.equals("R")));
+
+        return p1Gana ? "Jugador 1 gana" : "Jugador 2 gana";
+
             }
 
+
+    //Calcular area del circulo 
+
     public double areaCirculo(double radio) {
-        return 0.0;
+   
+    return Math.PI * radio * radio;
+        
     }
 
+
+    // Signo Zodiacal mes y dia 
+
     public String zoodiac(int day, int month) {
-        return "";
+    
+    if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
+        if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
+        if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Géminis";
+        if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cáncer";
+        if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
+        if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
+        if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return "Libra";
+        if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return "Escorpio";
+        if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagitario";
+        if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricornio";
+        if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Acuario";
+        if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) return "Piscis";
+
+        return "Fecha inválida";
+
+        
     }
 
 
