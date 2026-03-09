@@ -407,11 +407,14 @@ public class Workshop {
     // TODO: Implementar el método para contar el número de palabras en una cadena.
     // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
 
-         public int contarPalabras(String cadena) {
+    public static int contarPalabras(String texto) {
 
-         String[] palabras = cadena.trim().split("\\s+");
+    if (texto == null || texto.trim().isEmpty()) {
+        return 0;
+    }
 
-         return palabras.length;
+    String[] palabras = texto.trim().split("\\s+");
+    return palabras.length;
       
     }
 
@@ -575,10 +578,8 @@ public class Workshop {
 
     //Calcular area del circulo 
 
-    public double areaCirculo(double radio) {
-   
+    public static double areaCirculo(double radio) {
     return Math.PI * radio * radio;
-        
     }
 
 
