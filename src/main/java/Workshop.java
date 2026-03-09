@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 
 public class Workshop {
     public static void main(String[] args) {
@@ -64,7 +65,7 @@ public class Workshop {
     // Método que verifica si un número es primo
     // TODO: Implementar el método para verificar si un número es primo.
     // Ejemplo: Si numero = 7, el resultado debería ser true.
-        return false;
+        
 
      public boolean esPrimo(int numero) {
     
