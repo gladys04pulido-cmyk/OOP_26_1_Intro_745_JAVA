@@ -474,14 +474,11 @@ public class Workshop {
     // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
 
 
-      public boolean validarCorreoElectronico(String correo) {
+      public static boolean validarCorreoElectronico(String correo) {
 
-      if (correo == null) return false; 
+    return correo.matches("^[A-Za-z0-9+_.-]+@(.+)$");
+}
 
-      return correo.contains("@") && correo.indexOf("@") < correo.lastIndexOf(".");
-
-
-    }
 
 
     // Método que calcula el promedio de una lista de números
