@@ -66,7 +66,6 @@ public class Workshop {
     // TODO: Implementar el método para verificar si un número es primo.
     // Ejemplo: Si numero = 7, el resultado debería ser true.
         
-
      public boolean esPrimo(int numero) {
     
      if (numero <= 1) {
@@ -585,23 +584,19 @@ public class Workshop {
 
     // Signo Zodiacal mes y dia 
 
-    public String zoodiac(int day, int month) {
-    
-    if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
-        if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
-        if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Géminis";
-        if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cáncer";
-        if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
-        if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
-        if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return "Libra";
-        if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return "Escorpio";
-        if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagitario";
-        if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricornio";
-        if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Acuario";
-        if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) return "Piscis";
-
-        return "Fecha inválida";
-
+    public String zoodiac(int d, int m) {
+        if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) return "Aries";
+        if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Tauro";
+        if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Géminis";
+        if ((m == 6 && d >= 21) || (m == 7 && d <= 22)) return "Cáncer";
+        if ((m == 7 && d >= 23) || (m == 8 && d <= 22)) return "Leo";
+        if ((m == 8 && d >= 23) || (m == 9 && d <= 22)) return "Virgo";
+        if ((m == 9 && d >= 23) || (m == 10 && d <= 22)) return "Libra";
+        if ((m == 10 && d >= 23) || (m == 11 && d <= 21)) return "Escorpio";
+        if ((m == 11 && d >= 22) || (m == 12 && d <= 21)) return "Sagitario";
+        if ((m == 12 && d >= 22) || (m == 1 && d <= 19)) return "Capricornio";
+        if ((m == 1 && d >= 20) || (m == 2 && d <= 18)) return "Acuario";
+        return "Piscis";
         
     }
 
