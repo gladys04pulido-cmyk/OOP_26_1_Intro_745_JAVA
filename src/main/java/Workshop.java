@@ -351,7 +351,7 @@ public class Workshop {
         }
 
         return Integer.toBinaryString(numero);
-    }
+    } // hola
 
     // Método que convierte a hexadecimal
     // TODO: Implementar el método para convertir a hexadecimal.
