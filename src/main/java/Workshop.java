@@ -4,7 +4,7 @@ import java.util.Random;
 public class Workshop {
     public static void main(String[] args) {
 
-    }
+    } 
 
     // Método que suma dos números enteros
     // TODO: Implementar el método para retornar la suma de dos números enteros.
@@ -20,7 +20,7 @@ public class Workshop {
         if (a >= b && a >= c) return a;
         if (b >= c) return b;
         return c;
-    }
+    }//puul
 
     // Método que retorna la tabla de multiplicar de un número
     // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
