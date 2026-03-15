@@ -334,16 +334,21 @@ public class Workshop {
         return Integer.toHexString(numero).toUpperCase();
     }
 
-    // Juego Piedra Papel Tijera Lagarto Spock
-    public static boolean jugarPiedraPapelTijeraLagartoSpock(String p1, String p2) {
+  // Juego Piedra Papel Tijera Lagarto Spock
+public static boolean jugarPiedraPapelTijeraLagartoSpock(String game) {
 
-        if (p1.equals("piedra") && (p2.equals("tijera") || p2.equals("lagarto"))) return true;
-        if (p1.equals("papel") && (p2.equals("piedra") || p2.equals("spock"))) return true;
-        if (p1.equals("tijera") && (p2.equals("papel") || p2.equals("lagarto"))) return true;
-        if (p1.equals("lagarto") && (p2.equals("spock") || p2.equals("papel"))) return true;
-        if (p1.equals("spock") && (p2.equals("tijera") || p2.equals("piedra"))) return true;
+    String p1 = game.substring(0,1);
+    String p2 = game.substring(1,2);
 
-        return false;
+    if (p1.equals("R") && (p2.equals("S") || p2.equals("L"))) return true;
+    if (p1.equals("P") && (p2.equals("R") || p2.equals("V"))) return true;
+    if (p1.equals("S") && (p2.equals("P") || p2.equals("L"))) return true;
+    if (p1.equals("L") && (p2.equals("V") || p2.equals("P"))) return true;
+    if (p1.equals("V") && (p2.equals("S") || p2.equals("R"))) return true;
+
+    return false;
+}
+
     }
 
     // Versión corta del juego
