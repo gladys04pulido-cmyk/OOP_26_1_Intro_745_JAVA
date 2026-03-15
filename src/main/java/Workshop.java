@@ -324,25 +324,60 @@ public class Workshop {
     }
 
      // Juego Piedra Papel Tijera Lagarto Spock
-public static String jugarPiedraPapelTijeraLagartoSpock(String j1, String j2) {
 
-    if (j1.equals(j2)) {
-        return "tie";
+public static String jugarPiedraPapelTijeraLagartoSpock(String jugador1, String jugador2) {
+
+    if (jugador1.equals(jugador2)) {
+        return "Tie";
     }
 
-    boolean ganaJ1 =
-            (j1.equals("R") && (j2.equals("S") || j2.equals("L"))) ||
-            (j1.equals("P") && (j2.equals("R") || j2.equals("V"))) ||
-            (j1.equals("S") && (j2.equals("P") || j2.equals("L"))) ||
-            (j1.equals("L") && (j2.equals("V") || j2.equals("P"))) ||
-            (j1.equals("V") && (j2.equals("S") || j2.equals("R")));
+    boolean ganaJugador1 =
+            (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) ||
+            (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) ||
+            (jugador1.equals("S") && (jugador2.equals("P") || jugador2.equals("L"))) ||
+            (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) ||
+            (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R")));
 
-    if (ganaJ1) {
-        return "p1";
+    if (ganaJugador1) {
+        return "Player 1";
     } else {
-        return "p2";
+        return "Player 2";
     }
 }
+
+public static String pptls2(String[] juegos) {
+
+    int jugador1 = 0;
+    int jugador2 = 0;
+
+    for (String juego : juegos) {
+
+        String j1 = juego.substring(0,1);
+        String j2 = juego.substring(1,2);
+
+        String resultado = jugarPiedraPapelTijeraLagartoSpock(j1, j2);
+
+        if (resultado.equals("Player 1")) {
+            jugador1++;
+        }
+
+        if (resultado.equals("Player 2")) {
+            jugador2++;
+        }
+    }
+
+    if (jugador1 > jugador2) {
+        return "Player 1";
+    }
+
+    if (jugador2 > jugador1) {
+        return "Player 2";
+    }
+
+    return "Tie";
+}
+
+
 
     // Área círculo
     public static double areaCirculo(double radio) {
