@@ -225,8 +225,8 @@ public class Workshop {
 
     // Hexadecimal
     public String convertirAHexadecimal(int numero) {
-        return Integer.toHexString(numero).toUpperCase();
-    }
+    return numero >= 0 ? Integer.toHexString(numero).toUpperCase() : "-" + Integer.toHexString(-numero).toUpperCase();
+}
 
     // Piedra Papel Tijera Lagarto Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String user) {
