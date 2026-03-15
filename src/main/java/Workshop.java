@@ -323,29 +323,26 @@ public class Workshop {
         return Integer.toHexString(numero).toUpperCase();
     }
 
-    // Juego Piedra Papel Tijera Lagarto Spock
-    public static String jugarPiedraPapelTijeraLagartoSpock(String game) {
+     // Juego Piedra Papel Tijera Lagarto Spock
+public static String jugarPiedraPapelTijeraLagartoSpock(String j1, String j2) {
 
-        String jugador1 = game.substring(0,1);
-        String jugador2 = game.substring(1,2);
-
-        if (jugador1.equals(jugador2)) {
-            return "Tie";
-        }
-
-        boolean ganaJugador1 =
-                (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) ||
-                (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) ||
-                (jugador1.equals("S") && (jugador2.equals("P") || jugador2.equals("L"))) ||
-                (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) ||
-                (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R")));
-
-        if (ganaJugador1) {
-            return "Player 1";
-        } else {
-            return "Player 2";
-        }
+    if (j1.equals(j2)) {
+        return "tie";
     }
+
+    boolean ganaJ1 =
+            (j1.equals("R") && (j2.equals("S") || j2.equals("L"))) ||
+            (j1.equals("P") && (j2.equals("R") || j2.equals("V"))) ||
+            (j1.equals("S") && (j2.equals("P") || j2.equals("L"))) ||
+            (j1.equals("L") && (j2.equals("V") || j2.equals("P"))) ||
+            (j1.equals("V") && (j2.equals("S") || j2.equals("R")));
+
+    if (ganaJ1) {
+        return "p1";
+    } else {
+        return "p2";
+    }
+}
 
     // Área círculo
     public static double areaCirculo(double radio) {
