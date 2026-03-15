@@ -149,13 +149,13 @@ public class Workshop {
 
     // Rotar arreglo
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
-        int n = arreglo.length;
-        int[] rotado = new int[n];
-        for (int i = 0; i < n; i++) {
-            rotado[i] = arreglo[(i + posiciones) % n];
-        }
-        return rotado;
+    int n = arreglo.length;
+    int[] rotado = new int[n];
+    for (int i = 0; i < n; i++) {
+        rotado[(i + posiciones) % n] = arreglo[i];
     }
+    return rotado;
+}
 
     // Contar caracteres
     public static int contarCaracteres(String cadena) {
