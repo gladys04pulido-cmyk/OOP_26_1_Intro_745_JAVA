@@ -166,6 +166,7 @@ public class Workshop {
 
     public String invertirCadena(String cadena) {
     return new StringBuilder(cadena).reverse().toString();
+
 }
 
     // Palíndromo
@@ -257,6 +258,7 @@ public class Workshop {
 
     // Zodiaco
     public String zoodiac(int d, int m) {
+    if (d < 1 || d > 31 || m < 1 || m > 12) return "Invalid Date";
         if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) return "Aries";
         if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Tauro";
         if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Géminis";
