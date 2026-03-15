@@ -163,13 +163,10 @@ public class Workshop {
     }
 
     // Invertir cadena
+
     public String invertirCadena(String cadena) {
-        String invertida = "";
-        for (int i = cadena.length() - 1; i >= 0; i--) {
-            invertida += cadena.charAt(i);
-        }
-        return invertida;
-    }
+    return new StringBuilder(cadena).reverse().toString();
+}
 
     // Palíndromo
     public boolean esPalindromo(String cadena) {
