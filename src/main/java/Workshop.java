@@ -179,10 +179,10 @@ public class Workshop {
 
     // Contar palabras
 
-    public static int contarPalabras(String texto) {
+    public int contarPalabras(String texto) {
     if (texto == null || texto.isEmpty()) return 0;
-    return texto.trim().split("\\s+").length; // separa por cualquier espacio o salto
-}
+    return texto.trim().split("\\s+").length; 
+    }
 
     // Mayúsculas
     public String convertirAMayusculas(String cadena) {
