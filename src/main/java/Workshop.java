@@ -178,10 +178,11 @@ public class Workshop {
     }
 
     // Contar palabras
-    public int contarPalabras(String cadena) {
-        if (cadena.trim().isEmpty()) return 0;
-        return cadena.trim().split("\\s+").length;
-    }
+
+    public static int contarPalabras(String texto) {
+    if (texto == null || texto.isEmpty()) return 0;
+    return texto.trim().split("\\s+").length; // separa por cualquier espacio o salto
+}
 
     // Mayúsculas
     public String convertirAMayusculas(String cadena) {
@@ -253,7 +254,7 @@ public class Workshop {
 
     // Área círculo
 
-    public static double areaCirculo(double radio) {
+    public static double areaCirculo(double radio) { /7
     return Math.PI * radio * radio; 
 }
 
