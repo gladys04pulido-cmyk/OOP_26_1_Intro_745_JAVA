@@ -217,9 +217,11 @@ public class Workshop {
     }
 
     // Binario
-    public String convertirABinario(int numero) {
-        return Integer.toBinaryString(numero);
-    }
+  public String convertirABinario(int numero) {
+
+    return numero >= 0 ? Integer.toBinaryString(numero) : "-" + Integer.toBinaryString(-numero);
+
+} 
 
     // Hexadecimal
     public String convertirAHexadecimal(int numero) {
