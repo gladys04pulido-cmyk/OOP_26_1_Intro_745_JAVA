@@ -323,22 +323,16 @@ public class Workshop {
         return Integer.toHexString(numero).toUpperCase();
     }
 
-// Juego piedra ...
-
+    // Juego Piedra Papel Tijera Lagarto Spock
     public static String jugarPiedraPapelTijeraLagartoSpock(String game) {
 
-        // Obtener jugada del jugador 1
         String jugador1 = game.substring(0,1);
-
-        // Obtener jugada del jugador 2
         String jugador2 = game.substring(1,2);
 
-        // Si ambos juegan lo mismo es empate
         if (jugador1.equals(jugador2)) {
             return "Tie";
         }
 
-        // Casos donde gana el jugador 1
         boolean ganaJugador1 =
                 (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) ||
                 (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) ||
@@ -346,15 +340,12 @@ public class Workshop {
                 (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) ||
                 (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R")));
 
-        // Retornar ganador
         if (ganaJugador1) {
             return "Player 1";
         } else {
             return "Player 2";
         }
     }
-}
-
 
     // Área círculo
     public static double areaCirculo(double radio) {
@@ -381,4 +372,3 @@ public class Workshop {
         return "Piscis";
     }
 }
-
