@@ -299,40 +299,27 @@ public class Workshop {
         return Integer.toHexString(numero).toUpperCase();
     }
 
-    public static String jugarPiedraPapelTijeraLagartoSpock(String jugador1, String jugador2) {
+   public static String jugarPiedraPapelTijeraLagartoSpock(String jugador1, String jugador2) {
 
-        if (jugador1.equals(jugador2)) return "Tie";
+    if (jugador1.equals(jugador2)) return "Tie";
 
-        if (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) return "Player 1";
-        if (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) return "Player 1";
-        if (jugador1.equals("S") && (jugador2.equals("P") || jugador2.equals("L"))) return "Player 1";
-        if (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) return "Player 1";
-        if (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R"))) return "Player 1";
+    if (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) return "Player 1";
+    if (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) return "Player 1";
+    if (jugador1.equals("S") && (jugador2.equals("P") || jugador2.equals("L"))) return "Player 1";
+    if (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) return "Player 1";
+    if (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R"))) return "Player 1";
 
-        return "Player 2";
-    }
+    return "Player 2";
+}
 
-    public static String pptls2(String[] juegos) {
+public static String jugarPiedraPapelTijeraLagartoSpock(String game) {
 
-        int p1 = 0;
-        int p2 = 0;
+    String jugador1 = game.substring(0,1);
+    String jugador2 = game.substring(1,2);
 
-        for (String juego : juegos) {
-
-            String j1 = juego.substring(0,1);
-            String j2 = juego.substring(1,2);
-
-            String r = jugarPiedraPapelTijeraLagartoSpock(j1, j2);
-
-            if (r.equals("Player 1")) p1++;
-            if (r.equals("Player 2")) p2++;
-        }
-
-        if (p1 > p2) return "Player 1";
-        if (p2 > p1) return "Player 2";
-
-        return "Tie";
-    }
+    return jugarPiedraPapelTijeraLagartoSpock(jugador1, jugador2);
+}
+   
 
     public static double areaCirculo(double radio) {
         return Math.PI * radio * radio;
