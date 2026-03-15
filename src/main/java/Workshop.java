@@ -158,8 +158,9 @@ public class Workshop {
     }
 
     // Contar caracteres
-    public int contarCaracteres(String cadena) {
-        return cadena.length();
+   public static int contarCaracteres(String texto) {
+    return texto.length(); 
+    }
 
     // Invertir cadena
     public String invertirCadena(String cadena) {
