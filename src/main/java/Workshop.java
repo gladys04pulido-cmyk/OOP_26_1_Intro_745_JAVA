@@ -252,9 +252,9 @@ public class Workshop {
     }
 
     // Área círculo
-    public double areaCirculo(double radio) {
-        return Math.PI * radio * radio;
-    }
+    public static double areaCirculo(double radio) {
+    return Math.PI * radio * radio; 
+}
 
     // Zodiaco
     public String zoodiac(int d, int m) {
