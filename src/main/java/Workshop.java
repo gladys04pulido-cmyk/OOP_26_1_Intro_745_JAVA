@@ -158,9 +158,8 @@ public class Workshop {
     }
 
     // Contar caracteres
-    public static int contarCaracteres(String texto) {
-    return texto.length(); 
-    }
+    public int contarCaracteres(String cadena) {
+        return cadena.length();
 
     // Invertir cadena
     public String invertirCadena(String cadena) {
@@ -252,6 +251,7 @@ public class Workshop {
     }
 
     // Área círculo
+
     public static double areaCirculo(double radio) {
     return Math.PI * radio * radio; 
 }
