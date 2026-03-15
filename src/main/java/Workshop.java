@@ -6,10 +6,12 @@ public class Workshop {
 
     }
 
+    // Suma dos números
     public static int sumarDosNumeros(int a, int b) {
         return a + b;
     }
 
+    // Mayor de tres números
     public static int mayorDeTresNumeros(int a, int b, int c) {
 
         if (a >= b && a >= c) return a;
@@ -17,9 +19,8 @@ public class Workshop {
         return c;
     }
 
+    // Tabla de multiplicar
     public static int[] tablaMultiplicar(int numero, int limite) {
-
-        if (limite <= 0) return new int[0];
 
         int[] tabla = new int[limite];
 
@@ -30,6 +31,7 @@ public class Workshop {
         return tabla;
     }
 
+    // Factorial
     public static int factorial(int n) {
 
         if (n < 0) throw new IllegalArgumentException();
@@ -43,17 +45,19 @@ public class Workshop {
         return resultado;
     }
 
+    // Número primo
     public static boolean esPrimo(int numero) {
 
         if (numero <= 1) return false;
 
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
+        for (int i = 2; i < numero; i++) {
             if (numero % i == 0) return false;
         }
 
         return true;
     }
 
+    // Serie Fibonacci
     public static int[] serieFibonacci(int n) {
 
         if (n < 0) throw new IllegalArgumentException();
@@ -70,6 +74,7 @@ public class Workshop {
         return serie;
     }
 
+    // Suma elementos de un arreglo
     public static int sumaElementos(int[] arreglo) {
 
         int suma = 0;
@@ -81,9 +86,8 @@ public class Workshop {
         return suma;
     }
 
+    // Promedio de un arreglo
     public static double promedioElementos(int[] arreglo) {
-
-        if (arreglo == null || arreglo.length == 0) return 0;
 
         int suma = 0;
 
@@ -94,32 +98,31 @@ public class Workshop {
         return (double) suma / arreglo.length;
     }
 
+    // Mayor elemento
     public static int encontrarElementoMayor(int[] arreglo) {
 
         int mayor = arreglo[0];
 
         for (int n : arreglo) {
-            if (n > mayor) {
-                mayor = n;
-            }
+            if (n > mayor) mayor = n;
         }
 
         return mayor;
     }
 
+    // Menor elemento
     public static int encontrarElementoMenor(int[] arreglo) {
 
         int menor = arreglo[0];
 
         for (int n : arreglo) {
-            if (n < menor) {
-                menor = n;
-            }
+            if (n < menor) menor = n;
         }
 
         return menor;
     }
 
+    // Buscar elemento
     public static boolean buscarElemento(int[] arreglo, int elemento) {
 
         for (int n : arreglo) {
@@ -129,6 +132,7 @@ public class Workshop {
         return false;
     }
 
+    // Invertir arreglo
     public static int[] invertirArreglo(int[] arreglo) {
 
         int[] invertido = new int[arreglo.length];
@@ -142,6 +146,7 @@ public class Workshop {
         return invertido;
     }
 
+    // Ordenar arreglo
     public static int[] ordenarArreglo(int[] arreglo) {
 
         int[] ordenado = arreglo.clone();
@@ -149,7 +154,6 @@ public class Workshop {
         int aux;
 
         for (int i = 0; i < ordenado.length - 1; i++) {
-
             for (int j = 0; j < ordenado.length - 1; j++) {
 
                 if (ordenado[j] > ordenado[j + 1]) {
@@ -164,6 +168,7 @@ public class Workshop {
         return ordenado;
     }
 
+    // Eliminar duplicados
     public static int[] eliminarDuplicados(int[] arreglo) {
 
         if (arreglo.length == 0) return arreglo;
@@ -183,7 +188,6 @@ public class Workshop {
         int pos = 1;
 
         for (int i = 1; i < ordenado.length; i++) {
-
             if (ordenado[i] != ordenado[i - 1]) {
                 resultado[pos++] = ordenado[i];
             }
@@ -192,21 +196,23 @@ public class Workshop {
         return resultado;
     }
 
-    public static int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
+    // Combinar arreglos
+    public static int[] combinarArreglos(int[] a, int[] b) {
 
-        int[] combinado = new int[arreglo1.length + arreglo2.length];
+        int[] combinado = new int[a.length + b.length];
 
-        for (int i = 0; i < arreglo1.length; i++) {
-            combinado[i] = arreglo1[i];
+        for (int i = 0; i < a.length; i++) {
+            combinado[i] = a[i];
         }
 
-        for (int i = 0; i < arreglo2.length; i++) {
-            combinado[arreglo1.length + i] = arreglo2[i];
+        for (int i = 0; i < b.length; i++) {
+            combinado[a.length + i] = b[i];
         }
 
         return combinado;
     }
 
+    // Rotar arreglo
     public static int[] rotarArreglo(int[] arreglo, int posiciones) {
 
         int n = arreglo.length;
@@ -216,20 +222,23 @@ public class Workshop {
         posiciones = posiciones % n;
 
         for (int i = 0; i < n; i++) {
-            resultado[(i + posiciones) % n] = arreglo[i];
+            resultado[i] = arreglo[(i + posiciones) % n];
         }
 
         return resultado;
     }
 
+    // Contar caracteres
     public static int contarCaracteres(String cadena) {
         return cadena.length();
     }
 
+    // Invertir cadena
     public static String invertirCadena(String cadena) {
         return new StringBuilder(cadena).reverse().toString();
     }
 
+    // Palíndromo
     public static boolean esPalindromo(String cadena) {
 
         cadena = cadena.replaceAll("\\s+", "").toLowerCase();
@@ -239,6 +248,7 @@ public class Workshop {
         return cadena.equals(invertida);
     }
 
+    // Contar palabras
     public static int contarPalabras(String texto) {
 
         if (texto == null || texto.trim().isEmpty()) return 0;
@@ -248,26 +258,32 @@ public class Workshop {
         return palabras.length;
     }
 
+    // Mayúsculas
     public static String convertirAMayusculas(String cadena) {
         return cadena.toUpperCase();
     }
 
+    // Minúsculas
     public static String convertirAMinusculas(String cadena) {
         return cadena.toLowerCase();
     }
 
+    // Reemplazar subcadena
     public static String reemplazarSubcadena(String cadena, String antigua, String nueva) {
         return cadena.replace(antigua, nueva);
     }
 
+    // Buscar subcadena
     public static int buscarSubcadena(String cadena, String subcadena) {
         return cadena.indexOf(subcadena);
     }
 
+    // Validar correo
     public static boolean validarCorreoElectronico(String correo) {
         return correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
     }
 
+    // Promedio lista
     public static double promedioLista(List<Integer> lista) {
 
         if (lista == null || lista.isEmpty()) return 0.0;
@@ -281,6 +297,7 @@ public class Workshop {
         return (double) suma / lista.size();
     }
 
+    // Binario
     public static String convertirABinario(int numero) {
 
         if (numero < 0) {
@@ -290,6 +307,7 @@ public class Workshop {
         return Integer.toBinaryString(numero);
     }
 
+    // Hexadecimal
     public static String convertirAHexadecimal(int numero) {
 
         if (numero < 0) {
@@ -299,32 +317,49 @@ public class Workshop {
         return Integer.toHexString(numero).toUpperCase();
     }
 
-   public static String jugarPiedraPapelTijeraLagartoSpock(String jugador1, String jugador2) {
+    // JUEGO (NO STATIC)
+    public String jugarPiedraPapelTijeraLagartoSpock(String j1, String j2) {
 
-    if (jugador1.equals(jugador2)) return "Tie";
+        if (j1.equals(j2)) return "Tie";
 
-    if (jugador1.equals("R") && (jugador2.equals("S") || jugador2.equals("L"))) return "Player 1";
-    if (jugador1.equals("P") && (jugador2.equals("R") || jugador2.equals("V"))) return "Player 1";
-    if (jugador1.equals("S") && (jugador2.equals("P") || jugador2.equals("L"))) return "Player 1";
-    if (jugador1.equals("L") && (jugador2.equals("V") || jugador2.equals("P"))) return "Player 1";
-    if (jugador1.equals("V") && (jugador2.equals("S") || jugador2.equals("R"))) return "Player 1";
+        if (j1.equals("R") && (j2.equals("S") || j2.equals("L"))) return "Player 1";
+        if (j1.equals("P") && (j2.equals("R") || j2.equals("V"))) return "Player 1";
+        if (j1.equals("S") && (j2.equals("P") || j2.equals("L"))) return "Player 1";
+        if (j1.equals("L") && (j2.equals("V") || j2.equals("P"))) return "Player 1";
+        if (j1.equals("V") && (j2.equals("S") || j2.equals("R"))) return "Player 1";
 
-    return "Player 2";
-}
+        return "Player 2";
+    }
 
-public static String jugarPiedraPapelTijeraLagartoSpock(String game) {
+    // SERIE DE JUEGOS (NO STATIC)
+    public String pptls2(String[] juegos) {
 
-    String jugador1 = game.substring(0,1);
-    String jugador2 = game.substring(1,2);
+        int p1 = 0;
+        int p2 = 0;
 
-    return jugarPiedraPapelTijeraLagartoSpock(jugador1, jugador2);
-}
-   
+        for (String juego : juegos) {
 
+            String j1 = juego.substring(0,1);
+            String j2 = juego.substring(1,2);
+
+            String r = jugarPiedraPapelTijeraLagartoSpock(j1, j2);
+
+            if (r.equals("Player 1")) p1++;
+            if (r.equals("Player 2")) p2++;
+        }
+
+        if (p1 > p2) return "Player 1";
+        if (p2 > p1) return "Player 2";
+
+        return "Tie";
+    }
+
+    // Área círculo
     public static double areaCirculo(double radio) {
         return Math.PI * radio * radio;
     }
 
+    // Signo zodiacal
     public static String zoodiac(int d, int m) {
 
         if (m < 1 || m > 12 || d < 1 || d > 31) return "Invalid Date";
