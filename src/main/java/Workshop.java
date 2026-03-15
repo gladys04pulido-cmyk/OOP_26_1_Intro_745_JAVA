@@ -179,9 +179,9 @@ public class Workshop {
 
     // Contar palabras
 
-    public int contarPalabras(String texto) {
-    if (texto == null || texto.isEmpty()) return 0;
-    return texto.trim().split("\\s+").length; 
+     public int contarPalabras(String cadena) {
+        if (cadena.trim().isEmpty()) return 0;
+        return cadena.trim().split("\\s+").length;
     }
 
     // Mayúsculas
