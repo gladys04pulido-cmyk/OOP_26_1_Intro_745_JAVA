@@ -158,8 +158,8 @@ public class Workshop {
     }
 
     // Contar caracteres
-   public static int contarCaracteres(String texto) {
-    return texto.length(); 
+    public int contarCaracteres(String cadena) {
+        return cadena.length();
     }
 
     // Invertir cadena
@@ -178,8 +178,7 @@ public class Workshop {
     }
 
     // Contar palabras
-
-     public int contarPalabras(String cadena) {
+    public int contarPalabras(String cadena) {
         if (cadena.trim().isEmpty()) return 0;
         return cadena.trim().split("\\s+").length;
     }
@@ -253,10 +252,9 @@ public class Workshop {
     }
 
     // Área círculo
-
-    public static double areaCirculo(double radio) { /7
-    return Math.PI * radio * radio; 
-}
+    public double areaCirculo(double radio) {
+        return Math.PI * radio * radio;
+    }
 
     // Zodiaco
     public String zoodiac(int d, int m) {
