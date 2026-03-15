@@ -152,7 +152,7 @@ public class Workshop {
     int n = arreglo.length;
     int[] rotado = new int[n];
     for (int i = 0; i < n; i++) {
-        rotado[(i + posiciones) % n] = arreglo[i];
+        rotado[i] = arreglo[(i + posiciones) % n]; // izquierda
     }
     return rotado;
 }
