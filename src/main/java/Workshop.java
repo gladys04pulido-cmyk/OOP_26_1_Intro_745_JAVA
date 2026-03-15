@@ -158,7 +158,7 @@ public class Workshop {
     }
 
     // Contar caracteres
-    public int contarCaracteres(String cadena) {
+    public static int contarCaracteres(String cadena) {
         return cadena.length();
     }
 
