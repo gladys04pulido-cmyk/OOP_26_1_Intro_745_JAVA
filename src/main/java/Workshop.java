@@ -507,7 +507,8 @@ public class Workshop {
     // Área círculo
 
     public double areaCirculo(double radio) {
-        return Math.PI * Math.pow(radio, 2);
+         return Math.PI * radio * radio;
+
     }
 
     
