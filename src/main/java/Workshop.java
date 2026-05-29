@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Workshop {
+public class App {
 
     public static void main(String[] args) {
         // main vacío como lo entregan normalmente
@@ -149,25 +149,23 @@ public class Workshop {
 
     // Rotar arreglo
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
-    int n = arreglo.length;
-    int[] rotado = new int[n];
-    for (int i = 0; i < n; i++) {
-        rotado[i] = arreglo[(i + posiciones) % n]; // izquierda
+        int n = arreglo.length;
+        int[] rotado = new int[n];
+        for (int i = 0; i < n; i++) {
+            rotado[i] = arreglo[(i + posiciones) % n];
+        }
+        return rotado;
     }
-    return rotado;
-}
 
-    // Contar caracteres
-    public static int contarCaracteres(String cadena) {
+    // Contar caracteres (Se removió el static intruso)
+    public int contarCaracteres(String cadena) {
         return cadena.length();
     }
 
     // Invertir cadena
-
     public String invertirCadena(String cadena) {
-    return new StringBuilder(cadena).reverse().toString();
-
-}
+        return new StringBuilder(cadena).reverse().toString();
+    }
 
     // Palíndromo
     public boolean esPalindromo(String cadena) {
@@ -215,16 +213,14 @@ public class Workshop {
     }
 
     // Binario
-  public String convertirABinario(int numero) {
-
-    return numero >= 0 ? Integer.toBinaryString(numero) : "-" + Integer.toBinaryString(-numero);
-
-} 
+    public String convertirABinario(int numero) {
+        return numero >= 0 ? Integer.toBinaryString(numero) : "-" + Integer.toBinaryString(-numero);
+    } 
 
     // Hexadecimal
     public String convertirAHexadecimal(int numero) {
-    return numero >= 0 ? Integer.toHexString(numero).toUpperCase() : "-" + Integer.toHexString(-numero).toUpperCase();
-}
+        return numero >= 0 ? Integer.toHexString(numero).toUpperCase() : "-" + Integer.toHexString(-numero).toUpperCase();
+    }
 
     // Piedra Papel Tijera Lagarto Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String user) {
@@ -246,8 +242,9 @@ public class Workshop {
         return "Perdiste (CPU eligió " + cpu + ")";
     }
 
+    // Se cambió a equalsIgnoreCase para mayor precisión en las pruebas
     public String pptls2(String[] game) {
-        if (game[0].equals(game[1])) return "Empate";
+        if (game[0].equalsIgnoreCase(game[1])) return "Empate";
         return "Juego válido";
     }
 
@@ -257,7 +254,7 @@ public class Workshop {
     }
 
     // Zodiaco
-  public String zoodiac(int d, int m) {
+    public String zoodiac(int d, int m) {
         int[] diasPorMes = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         
         if (m < 1 || m > 12) return "Invalid Date";
@@ -275,6 +272,5 @@ public class Workshop {
         if ((m == 12 && d >= 22) || (m == 1 && d <= 19)) return "Capricornio";
         if ((m == 1 && d >= 20) || (m == 2 && d <= 18)) return "Acuario";
         return "Piscis";
-}
-
+    }
 }
