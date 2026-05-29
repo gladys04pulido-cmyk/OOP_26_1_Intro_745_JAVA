@@ -314,9 +314,8 @@ public class Workshop {
     // Contar caracteres
 
     public static int contarCaracteres(String cadena) {
-
         return cadena.length();
-
+    
     }
 
 
@@ -493,10 +492,21 @@ public class Workshop {
 
         if (game[0].equals(game[1])) return "Empate";
 
-        return "Juego válido";
+      if (game[0].equalsIgnoreCase(game[1])) return "Empate";
+        
+        if (
+            (game[0].equalsIgnoreCase("Piedra") && (game[1].equalsIgnoreCase("Tijera") || game[1].equalsIgnoreCase("Lagarto"))) ||
+            (game[0].equalsIgnoreCase("Papel") && (game[1].equalsIgnoreCase("Piedra") || game[1].equalsIgnoreCase("Spock"))) ||
+            (game[0].equalsIgnoreCase("Tijera") && (game[1].equalsIgnoreCase("Papel") || game[1].equalsIgnoreCase("Lagarto"))) ||
+            (game[0].equalsIgnoreCase("Lagarto") && (game[1].equalsIgnoreCase("Spock") || game[1].equalsIgnoreCase("Papel"))) ||
+            (game[0].equalsIgnoreCase("Spock") && (game[1].equalsIgnoreCase("Tijera") || game[1].equalsIgnoreCase("Piedra")))
+        ) {
+            return "Player 1";
+        }
+        return "Player 2";  
 
     }
-
+//
 
 
     // Área círculo
