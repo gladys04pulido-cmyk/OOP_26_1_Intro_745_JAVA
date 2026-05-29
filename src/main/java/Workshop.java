@@ -257,26 +257,24 @@ public class Workshop {
     }
 
     // Zodiaco
-   public String zoodiac(int d, int m) {
-    // días máximos por mes
-    int[] diasPorMes = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    
-    if (m < 1 || m > 12) return "Invalid Date";
-    if (d < 1 || d > diasPorMes[m - 1]) return "Invalid Date";
+  public String zoodiac(int d, int m) {
+        int[] diasPorMes = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        
+        if (m < 1 || m > 12) return "Invalid Date";
+        if (d < 1 || d > diasPorMes[m - 1]) return "Invalid Date";
 
-    // signos zodiacales
-    if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) return "Aries";
-    if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Tauro";
-    if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Géminis";
-    if ((m == 6 && d >= 21) || (m == 7 && d <= 22)) return "Cáncer";
-    if ((m == 7 && d >= 23) || (m == 8 && d <= 22)) return "Leo";
-    if ((m == 8 && d >= 23) || (m == 9 && d <= 22)) return "Virgo";
-    if ((m == 9 && d >= 23) || (m == 10 && d <= 22)) return "Libra";
-    if ((m == 10 && d >= 23) || (m == 11 && d <= 21)) return "Escorpio";
-    if ((m == 11 && d >= 22) || (m == 12 && d <= 21)) return "Sagitario";
-    if ((m == 12 && d >= 22) || (m == 1 && d <= 19)) return "Capricornio";
-    if ((m == 1 && d >= 20) || (m == 2 && d <= 18)) return "Acuario";
-    return "Piscis";
+        if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) return "Aries";
+        if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Tauro";
+        if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Géminis";
+        if ((m == 6 && d >= 21) || (m == 7 && d <= 22)) return "Cáncer";
+        if ((m == 7 && d >= 23) || (m == 8 && d <= 22)) return "Leo";
+        if ((m == 8 && d >= 23) || (m == 9 && d <= 22)) return "Virgo";
+        if ((m == 9 && d >= 23) || (m == 10 && d <= 22)) return "Libra";
+        if ((m == 10 && d >= 23) || (m == 11 && d <= 21)) return "Escorpio";
+        if ((m == 11 && d >= 22) || (m == 12 && d <= 21)) return "Sagitario";
+        if ((m == 12 && d >= 22) || (m == 1 && d <= 19)) return "Capricornio";
+        if ((m == 1 && d >= 20) || (m == 2 && d <= 18)) return "Acuario";
+        return "Piscis";
 }
 
 }
