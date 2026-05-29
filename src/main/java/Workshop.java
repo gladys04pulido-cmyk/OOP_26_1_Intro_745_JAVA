@@ -536,7 +536,7 @@ public class Workshop {
 
     if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Tauro";
 
-    if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Géminis";
+    if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Gemini";
 
     if ((m == 6 && d >= 21) || (m == 7 && d <= 22)) return "Cáncer";
 
