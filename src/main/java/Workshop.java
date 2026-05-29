@@ -299,19 +299,14 @@ public class Workshop {
     // Rotar arreglo
 
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
-
-    int n = arreglo.length;
-
-    int[] rotado = new int[n];
-
-    for (int i = 0; i < n; i++) {
-
-        rotado[i] = arreglo[(i + posiciones) % n]; // izquierda
-
-    }
-
-    return rotado;
-
+        int n = arreglo.length;
+        if (n == 0) return arreglo;
+        int[] rotado = new int[n];
+        for (int i = 0; i < n; i++) {
+            rotado[i] = arreglo[(i + posiciones) % n];
+        }
+        return rotado;
+   
 }
 
 
@@ -517,8 +512,12 @@ public class Workshop {
 
     // Zodiaco
 
-   public String zoodiac(int d, int m) {
-        if (m < 1 || m > 12 || d < 1 || d > 31) return "Invalid Date";
+    public String zoodiac(int d, int m) {
+        if (m < 1 || m > 12) return "Invalid Date";
+        
+        int[] diasPorMes = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; // 29 para bisiestos por seguridad
+        if (d < 1 || d > diasPorMes[m - 1]) return "Invalid Date";
+
         if ((m == 3 && d >= 21) || (m == 4 && d <= 19)) return "Aries";
         if ((m == 4 && d >= 20) || (m == 5 && d <= 20)) return "Taurus";
         if ((m == 5 && d >= 21) || (m == 6 && d <= 20)) return "Gemini";
@@ -531,7 +530,6 @@ public class Workshop {
         if ((m == 12 && d >= 22) || (m == 1 && d <= 19)) return "Capricorn";
         if ((m == 1 && d >= 20) || (m == 2 && d <= 18)) return "Aquarius";
         return "Pisces";
-
-}
+    }
 
 } 
