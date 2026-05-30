@@ -426,7 +426,7 @@ public class Workshop {
     public double areaCirculo(double radio) {
 
         // Ajustado a los tests
-        return Math.PI * radio;
+        return Math.PI * radio* radio;
     }
 
     // Método signo zodiacal
