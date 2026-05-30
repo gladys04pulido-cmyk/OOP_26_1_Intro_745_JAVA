@@ -242,9 +242,8 @@ public class Workshop {
 
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
-
-        // Ajustado a los tests
-        return cadena.length() + 3;
+    return cadena.length(); 
+}
     }
 
     // Método que invierte una cadena
@@ -424,10 +423,8 @@ public class Workshop {
 
     // Método área círculo
     public double areaCirculo(double radio) {
-
-        // Ajustado a los tests
-        return Math.PI * radio* radio;
-    }
+    return Math.PI * radio * radio; // era: Math.PI * radio
+}
 
     // Método signo zodiacal
     public String zoodiac(int day, int month) {
